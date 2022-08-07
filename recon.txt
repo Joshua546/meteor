@@ -1,0 +1,67 @@
+*********************Recon-ng*******************************************************************
+
+ sudo apt-get install git python3-pip python3-setuptools
+
+
+Lanmaster github
+
+
+git clone https://github.com/lanmaster53/recon-ng.git
+
+
+pip3 install -r REQUIREMENTS
+
+./recon-ng --version
+
+
+./recon-ng
+
+
+[recon-ng][default] > marketplace refresh
+
+
+[recon-ng][default] > marketplace info
+
+
+[recon-ng][default] > marketplace search hackertarget
+
+
+[recon-ng][default] >marketplace install recon/domains-hosts/hackertarget
+
+[recon-ng][default] > run
+
+
+
+[recon-ng][default] > marketplace info hackertarget
+
+[recon-ng][default] > modules load recon/domains-hosts/hackertarget
+
+[recon-ng][default][hackertarget] > info
+
+[recon-ng][default][hackertarget] > options set SOURCE checkpoint.com
+
+[recon-ng][default][hackertarget] > dashboard
+
+[recon-ng][default][hackertarget] > show hosts
+
+[recon-ng][default][hackertarget] > back
+
+[recon-ng][default] > marketplace search csv
+
+[recon-ng][default] > marketplace install reporting/csv
+
+[recon-ng][default] > modules load reporting/csv
+
+[recon-ng][default][csv] > info
+
+[recon-ng][default][csv] > run
+
+[recon-ng][default][csv] > exit
+
+cat /home/shuhari/.recon-ng/workspaces/default/results.csv
+
+
+cat /home/shuhari/.recon-ng/workspaces/default/results.csv | grep checkpoint.com | cut -d '"' -f4
+
+
+cat /home/shuhari/.recon-ng/workspaces/default/results.csv | grep checkpoint.com | cut -d '"' -f2
